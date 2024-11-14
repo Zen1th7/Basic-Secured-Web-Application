@@ -26,7 +26,13 @@
             <div><input type="submit" value="Sign In" /></div>
         </form>
 
-
-        <script src="enter_login.js"></script>
+        <script>
+            function focusPassword(event) {
+                if (event.key === "Enter") {
+                    event.preventDefault(); // Prevent form submission
+                    document.getElementById("password").focus(); // Move focus to password field
+                }
+            }
+        </script>
     </body>
 </html>
